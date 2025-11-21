@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple-Scale 5E</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">Apple-Scale <span class="model">5E</span></div>
+            <div class="indicator-light" id="status-light"></div>
+        </header>
+
+        <main>
+            <div class="display-area">
+                <div class="weight-display">
+                    <span id="weight-value">0</span>
+                    <span class="unit">g</span>
+                </div>
+                <div class="label">ESTIMATED WEIGHT</div>
+            </div>
+
+            <div class="interaction-zone" id="touch-zone">
+                <div class="target-circle">
+                    <div class="inner-dot"></div>
+                </div>
+                <p class="instruction">请保持按压直到数字归零，再放物品</p>
+                <p class="sub-instruction">Press and hold until 0g, then add object</p>
+                <p class="sub-instruction" style="font-size: 10px; margin-top: 8px; color: #999;">(模拟原生 App 的去皮流程 /
+                    Simulating Tare Flow)</p>
+            </div>
+        </main>
+
+        <footer>
+            <button id="tare-btn" class="control-btn">归零 / TARE</button>
+            <div class="warning-text">⚠️ 注意：请勿放置超过 400g 的重物以免损坏设备</div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

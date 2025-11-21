@@ -1,0 +1,235 @@
+/**
+ * Apple-Scale 5E - Styles
+ * Based on Dieter Rams (Braun) Design Language
+ */
+
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #111111;
+    --accent-color: #ea5b0c;
+    /* Braun Orange */
+    --secondary-text: #666666;
+    --border-radius: 12px;
+    --font-main: 'Helvetica Neue', 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    font-family: var(--font-main);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+.container {
+    width: 360px;
+    height: 520px;
+    background: #e8e8e8;
+    border-radius: 24px;
+    box-shadow:
+        20px 20px 60px #c5c5c5,
+        -20px -20px 60px #ffffff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.brand {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.model {
+    font-weight: 300;
+    color: var(--secondary-text);
+}
+
+.indicator-light {
+    width: 8px;
+    height: 8px;
+    background-color: #333;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.indicator-light.active {
+    background-color: #00ff00;
+    box-shadow: 0 0 5px #00ff00;
+}
+
+/* Main Display */
+.display-area {
+    background: #dcdcdc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: right;
+    margin-bottom: 30px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.weight-display {
+    font-size: 64px;
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    color: #222;
+}
+
+.unit {
+    font-size: 18px;
+    color: var(--secondary-text);
+    margin-left: 5px;
+}
+
+.label {
+    font-size: 10px;
+    color: var(--secondary-text);
+    margin-top: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Interaction Zone */
+.interaction-zone {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #ccc;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    /* Increased height/padding for better visual balance */
+    min-height: 220px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.interaction-zone.active {
+    border-style: solid;
+    /* Solid looks more "locked in" and premium */
+    border-color: var(--accent-color);
+    background-color: rgba(234, 91, 12, 0.03);
+    /* Lighter background */
+    transform: scale(1.01);
+    box-shadow: 0 10px 40px rgba(234, 91, 12, 0.1);
+}
+
+.target-circle {
+    width: 80px;
+    /* Slightly larger */
+    height: 80px;
+    border: 1px solid #bbb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background-color: #fff;
+}
+
+.interaction-zone.active .target-circle {
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
+    /* Fill the circle */
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(234, 91, 12, 0.4);
+    border-width: 0;
+    /* Remove border when filled */
+}
+
+.inner-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.interaction-zone.active .inner-dot {
+    background-color: #fff;
+    /* White dot inside orange circle */
+    transform: scale(1.2);
+}
+
+.instruction {
+    font-size: 15px;
+    margin: 0;
+    font-weight: 500;
+    color: #333;
+}
+
+.sub-instruction {
+    font-size: 13px;
+    color: var(--secondary-text);
+    margin: 8px 0 0 0;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.instruction,
+.sub-instruction {
+    transition: opacity 0.3s;
+}
+
+.interaction-zone.active .instruction,
+.interaction-zone.active .sub-instruction {
+    opacity: 0.3;
+    /* Dim text to focus on the weight */
+}
+
+/* Footer & Controls */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.control-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.control-btn:active {
+    transform: scale(0.96);
+    background-color: #000;
+}
+
+.control-btn:hover {
+    background-color: #444;
+}
+
+.warning-text {
+    font-size: 10px;
+    color: #888;
+    text-align: center;
+}
