@@ -3,7 +3,9 @@
 > **Note**: This project is a web-based implementation of a digital scale using the macOS Force Touch trackpad.
 > **注意**：这是一个利用 macOS Force Touch 触控板实现的网页版电子秤。
 
-![Apple-Scale 5E](https://github.com/asun51/5E-Apple-scale/raw/main/preview.png)
+![Apple-Scale 5E]
+<img width="743" height="857" alt="Snipaste_2025-11-21_19-53-27" src="https://github.com/user-attachments/assets/b9d088bf-4d9a-4832-b427-900d38582866" />
+
 
 ## 🌟 Features (功能特点)
 
