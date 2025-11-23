@@ -15,6 +15,8 @@
 *   **Privacy First**: All data processed locally. (隐私安全，数据本地处理)
 
 ## 🚀 Quick Start (快速开始)
+快速线上试用（Safari浏览器）： https://apple-scale.vercel.app/
+
 
 1.  Download the code or clone this repository.
     ```bash
